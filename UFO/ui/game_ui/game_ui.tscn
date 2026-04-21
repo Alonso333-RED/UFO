@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://cjmj3eicibge5" path="res://ui/game_ui/button_scripts/down_left.gd" id="12_cxblh"]
 [ext_resource type="Script" uid="uid://hp52wgnc5ju4" path="res://ui/game_ui/button_scripts/down.gd" id="14_6o3q4"]
 [ext_resource type="Script" uid="uid://b7dtfb4iaqwf3" path="res://ui/game_ui/button_scripts/down_right.gd" id="16_2o6ga"]
+[ext_resource type="Texture2D" uid="uid://dtjyehccecm4u" path="res://ui/game_ui/touch_screen_controls/shoot.png" id="19_xrtc6"]
 
 [node name="game_ui" type="Control" unique_id=746683599]
 layout_mode = 3
@@ -168,3 +169,35 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("16_2o6ga")
+
+[node name="controls_container2" type="GridContainer" parent="CanvasLayer" unique_id=1694725853]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -750.0
+offset_bottom = -250.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/controls_container2" unique_id=1645578746]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+button_mask = 0
+icon = ExtResource("19_xrtc6")
+flat = true
+icon_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2109620939]
+layout_mode = 0
+offset_left = -1000.0
+offset_top = -500.0
+offset_right = 1000.0
+offset_bottom = 500.0
+color = Color(0, 0, 0, 0.25)

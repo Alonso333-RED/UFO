@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dk3y6wlflkbhj"]
+
+[ext_resource type="Script" uid="uid://vtq22g5wdnu0" path="res://attacks/laser_attack/laser_attack.gd" id="1_tu22p"]
+[ext_resource type="Texture2D" uid="uid://cqslfvgmpxu0n" path="res://attacks/laser_attack/LaserAttackWarning.png" id="2_r5l6l"]
+[ext_resource type="Texture2D" uid="uid://ksvtw0myl381" path="res://attacks/laser_attack/LaserAttackExecute.png" id="3_nswk3"]
+[ext_resource type="AudioStream" uid="uid://chutwynjpugf7" path="res://sounds/laser_attack.wav" id="4_n5q1y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w53eg"]
+size = Vector2(25, 2500)
+
+[node name="LaserAttack" type="Area2D" unique_id=364579141]
+script = ExtResource("1_tu22p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=744920693]
+shape = SubResource("RectangleShape2D_w53eg")
+
+[node name="warn_sprite" type="Sprite2D" parent="." unique_id=2020638120]
+scale = Vector2(0.025, 2.5)
+texture = ExtResource("2_r5l6l")
+
+[node name="attack_sprite" type="Sprite2D" parent="." unique_id=1754960477]
+z_index = 2
+scale = Vector2(0.025, 2.5)
+texture = ExtResource("3_nswk3")
+
+[node name="attack_sound" type="AudioStreamPlayer" parent="." unique_id=1969029126]
+stream = ExtResource("4_n5q1y")

@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://c16q4pr0k7aop"]
 
-[ext_resource type="PackedScene" uid="uid://6y82x4d1a68c" path="res://universal/player/player.tscn" id="1_js3st"]
+[ext_resource type="PackedScene" uid="uid://6y82x4d1a68c" path="res://universal/player/Player.tscn" id="1_js3st"]
 [ext_resource type="Texture2D" uid="uid://bx36a3k2kk1bp" path="res://universal/view_mask_1000.png" id="2_febxa"]
 [ext_resource type="PackedScene" uid="uid://c1nrw4xheladr" path="res://ui/game_ui/game_ui.tscn" id="3_o1vra"]
 [ext_resource type="PackedScene" uid="uid://c46c56elpxndb" path="res://universal/attack_engine/AttackSpawner.tscn" id="4_2cdau"]
 [ext_resource type="PackedScene" uid="uid://cfm5hq075vb57" path="res://universal/DefaultCamera.tscn" id="5_0v7l4"]
-[ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://Attacks/attack_data.gd" id="5_2cdau"]
-[ext_resource type="PackedScene" uid="uid://cx7tsdgup31h6" path="res://Attacks/area_attack/AreaAttack.tscn" id="6_2cdau"]
-[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://Attacks/area_regen/AreaRegen.tscn" id="7_0v7l4"]
+[ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://attacks/attack_data.gd" id="5_2cdau"]
+[ext_resource type="PackedScene" uid="uid://cx7tsdgup31h6" path="res://attacks/area_attack/AreaAttack.tscn" id="6_2cdau"]
+[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://attacks/area_regen/AreaRegen.tscn" id="7_0v7l4"]
 
 [sub_resource type="Resource" id="Resource_5nqen"]
 resource_local_to_scene = true

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cn7gha1yc3216"]
+
+[ext_resource type="Script" uid="uid://dshwjkyf2dgmq" path="res://attacks/bullet_attack/bullet_attack.gd" id="1_6q7iy"]
+[ext_resource type="Texture2D" uid="uid://cxmmhnyaj6njt" path="res://attacks/bullet_attack/BulletAttack.png" id="2_elmgf"]
+[ext_resource type="AudioStream" uid="uid://d1atfisq6r2vv" path="res://sounds/bullet_attack.wav" id="3_2qxgr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hycrm"]
+radius = 25.0
+height = 100.0
+
+[node name="BulletAttack" type="Area2D" unique_id=1055124260]
+script = ExtResource("1_6q7iy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1440936937]
+shape = SubResource("CapsuleShape2D_hycrm")
+
+[node name="attack_sprite" type="Sprite2D" parent="." unique_id=892373438]
+z_index = 3
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_elmgf")
+
+[node name="attack_sound" type="AudioStreamPlayer" parent="." unique_id=701376473]
+stream = ExtResource("3_2qxgr")
