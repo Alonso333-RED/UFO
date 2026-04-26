@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://v0g8cph88ley"]
+
+[ext_resource type="Script" uid="uid://o20qpwy26iej" path="res://maps/level_data.gd" id="1_arf0i"]
+
+[resource]
+script = ExtResource("1_arf0i")
+preview_path = "res://maps/horde_mode/laser_party/laser_party_preview.png"
+name = "Fiesta de Laseres"
+difficulty = 1
+scene = "res://maps/horde_mode/laser_party/laser_party.tscn"

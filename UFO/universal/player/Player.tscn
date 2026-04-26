@@ -21,7 +21,6 @@ texture = ExtResource("2_sweqy")
 [node name="Sprite2Dover" type="Sprite2D" parent="." unique_id=220653126]
 self_modulate = Color(1, 1, 1, 0.5)
 z_index = 3
-scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_sweqy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=21013761]
@@ -30,9 +29,6 @@ debug_color = Color(1, 1, 1, 0.5)
 
 [node name="RegenTimer" type="Timer" parent="." unique_id=139421536]
 autostart = true
-
-[node name="ShootTimer" type="Timer" parent="." unique_id=1206947529]
-wait_time = 0.1
 
 [node name="hit" type="AudioStreamPlayer" parent="." unique_id=1108756166]
 stream = ExtResource("3_i3pqv")
@@ -44,4 +40,3 @@ stream = ExtResource("4_hqtel")
 stream = ExtResource("5_sweqy")
 
 [connection signal="timeout" from="RegenTimer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

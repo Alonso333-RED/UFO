@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b456c6u4wuaid"]
+
+[ext_resource type="Script" uid="uid://boqechb2c7xgm" path="res://npc_enemies/area_regen/area_regen.gd" id="1_sx1kx"]
+[ext_resource type="Texture2D" uid="uid://d0lthuq7q3vhr" path="res://npc_enemies/area_regen/AreaRegen.png" id="2_r7y5p"]
+[ext_resource type="AudioStream" uid="uid://btcmjyk6uyi4h" path="res://sounds/regen_spawn.wav" id="3_5y1wv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rjuya"]
+radius = 50.0
+
+[node name="AreaRegen" type="Area2D" unique_id=1634869706]
+script = ExtResource("1_sx1kx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139157630]
+shape = SubResource("CircleShape2D_rjuya")
+debug_color = Color(0, 1, 0, 0.50200003)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1888653221]
+z_index = 2
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_r7y5p")
+
+[node name="spawn_sound" type="AudioStreamPlayer" parent="." unique_id=1826557113]
+stream = ExtResource("3_5y1wv")

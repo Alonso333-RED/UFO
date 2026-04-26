@@ -18,7 +18,9 @@
 [ext_resource type="Script" uid="uid://cjmj3eicibge5" path="res://ui/game_ui/button_scripts/down_left.gd" id="12_cxblh"]
 [ext_resource type="Script" uid="uid://hp52wgnc5ju4" path="res://ui/game_ui/button_scripts/down.gd" id="14_6o3q4"]
 [ext_resource type="Script" uid="uid://b7dtfb4iaqwf3" path="res://ui/game_ui/button_scripts/down_right.gd" id="16_2o6ga"]
+[ext_resource type="Script" uid="uid://bmq286xt230xd" path="res://addons/virtual_joystick_plus/virtual_joystick_plus.gd" id="19_7n2wi"]
 [ext_resource type="Texture2D" uid="uid://dtjyehccecm4u" path="res://ui/game_ui/touch_screen_controls/shoot.png" id="19_xrtc6"]
+[ext_resource type="Texture2D" uid="uid://d27ucdc6ns2e7" path="res://addons/virtual_joystick_plus/resources/textures/joystick_texture_6.png" id="20_wej1e"]
 
 [node name="game_ui" type="Control" unique_id=746683599]
 layout_mode = 3
@@ -185,14 +187,18 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="CanvasLayer/controls_container2" unique_id=1645578746]
+[node name="VirtualJoystickPlus" type="Control" parent="CanvasLayer/controls_container2" unique_id=1164638323]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-button_mask = 0
-icon = ExtResource("19_xrtc6")
-flat = true
-icon_alignment = 1
+script = ExtResource("19_7n2wi")
+scale_factor = 2.0
+joystick_preset_texture = 6
+joystick_texture = ExtResource("20_wej1e")
+stick_preset_texture = 6
+stick_texture = ExtResource("19_xrtc6")
+metadata/_custom_type_script = "uid://bmq286xt230xd"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2109620939]
 layout_mode = 0

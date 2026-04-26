@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bu51fjqgk6yep"]
+
+[ext_resource type="Script" uid="uid://o20qpwy26iej" path="res://maps/level_data.gd" id="1_v5rb1"]
+
+[resource]
+script = ExtResource("1_v5rb1")
+preview_path = "res://maps/horde_mode/bullet_hell/bullet_hell_preview.png"
+name = "Infierno de Balas"
+difficulty = 2
+scene = "res://maps/horde_mode/bullet_hell/bullet_hell.tscn"

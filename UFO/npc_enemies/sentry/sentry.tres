@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://bcra5eivrr0mp"]
+
+[ext_resource type="PackedScene" uid="uid://ci1rdmp1p2ijs" path="res://npc_enemies/sentry/Sentry.tscn" id="1_grp2s"]
+[ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://npc_enemies/npc_enemy_data.gd" id="2_xftpe"]
+
+[resource]
+script = ExtResource("2_xftpe")
+scene = ExtResource("1_grp2s")
+rarity = 1.0
+metadata/_custom_type_script = "uid://dq45wq163ut3i"

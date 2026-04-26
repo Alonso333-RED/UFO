@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ci1rdmp1p2ijs"]
+
+[ext_resource type="Script" uid="uid://b0ldplwieusa4" path="res://npc_enemies/sentry/sentry.gd" id="1_g2j0e"]
+[ext_resource type="Texture2D" uid="uid://bl3hxwusgs32t" path="res://npc_enemies/sentry/base.png" id="1_r7nhd"]
+[ext_resource type="Texture2D" uid="uid://c4urto2uio84e" path="res://npc_enemies/sentry/turret.png" id="2_yo75i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0hx8f"]
+radius = 50.0
+
+[node name="Sentry" type="Node2D" unique_id=1829395924]
+script = ExtResource("1_g2j0e")
+
+[node name="base" type="Sprite2D" parent="." unique_id=1682580657]
+texture = ExtResource("1_r7nhd")
+
+[node name="turret" type="Sprite2D" parent="." unique_id=171560414]
+texture = ExtResource("2_yo75i")
+offset = Vector2(0, -50)
+
+[node name="muzzle" type="Marker2D" parent="turret" unique_id=1305271733]
+position = Vector2(0, -50)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=809072551]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1335976125]
+shape = SubResource("CircleShape2D_0hx8f")

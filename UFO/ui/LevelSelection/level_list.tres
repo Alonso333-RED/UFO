@@ -1,12 +1,13 @@
 [gd_resource type="Resource" script_class="LevelList" format=3 uid="uid://72mkoqluvjc7"]
 
-[ext_resource type="Script" uid="uid://o20qpwy26iej" path="res://levels/level_data.gd" id="1_h2eu4"]
-[ext_resource type="Resource" uid="uid://d378mesn7vhwn" path="res://levels/original_game/original_game.tres" id="2_5pvj3"]
-[ext_resource type="Resource" uid="uid://bu51fjqgk6yep" path="res://levels/bullet_hell/bullet_hell.tres" id="3_mh8y2"]
-[ext_resource type="Resource" uid="uid://v0g8cph88ley" path="res://levels/laser_party/laser_party.tres" id="4_fbnhm"]
-[ext_resource type="Resource" uid="uid://b5maqqkc024jt" path="res://levels/bomb_rain/bomb_rain.tres" id="5_pbhsu"]
+[ext_resource type="Script" uid="uid://o20qpwy26iej" path="res://maps/level_data.gd" id="1_5pvj3"]
+[ext_resource type="Resource" uid="uid://d378mesn7vhwn" path="res://maps/horde_mode/original_game/original_game.tres" id="2_mh8y2"]
+[ext_resource type="Resource" uid="uid://bu51fjqgk6yep" path="res://maps/horde_mode/bullet_hell/bullet_hell.tres" id="3_fbnhm"]
+[ext_resource type="Resource" uid="uid://v0g8cph88ley" path="res://maps/horde_mode/laser_party/laser_party.tres" id="4_pbhsu"]
+[ext_resource type="Resource" uid="uid://b5maqqkc024jt" path="res://maps/horde_mode/bomb_rain/bomb_rain.tres" id="5_ane0m"]
+[ext_resource type="Resource" uid="uid://cvs5ygfm2rpla" path="res://maps/horde_mode/orbital_arena/terran_orbital_arena.tres" id="6_71cyd"]
 [ext_resource type="Script" uid="uid://68keoi7on8un" path="res://ui/LevelSelection/level_list.gd" id="6_ane0m"]
 
 [resource]
 script = ExtResource("6_ane0m")
-levels = Array[ExtResource("1_h2eu4")]([ExtResource("2_5pvj3"), ExtResource("3_mh8y2"), ExtResource("4_fbnhm"), ExtResource("5_pbhsu")])
+levels = Array[ExtResource("1_5pvj3")]([ExtResource("2_mh8y2"), ExtResource("3_fbnhm"), ExtResource("4_pbhsu"), ExtResource("5_ane0m"), ExtResource("6_71cyd")])

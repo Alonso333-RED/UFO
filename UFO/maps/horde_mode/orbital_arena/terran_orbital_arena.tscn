@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bhpsbu8cjsmsc"]
+
+[ext_resource type="Texture2D" uid="uid://bkdfmi3t4iu8a" path="res://maps/horde_mode/orbital_arena/map.jpg" id="1_3n41n"]
+[ext_resource type="PackedScene" uid="uid://6y82x4d1a68c" path="res://universal/player/Player.tscn" id="1_gbag3"]
+[ext_resource type="Texture2D" uid="uid://bx36a3k2kk1bp" path="res://universal/view_mask_1000.png" id="2_e0ej0"]
+[ext_resource type="PackedScene" uid="uid://c1nrw4xheladr" path="res://ui/game_ui/game_ui.tscn" id="3_qii2m"]
+[ext_resource type="PackedScene" uid="uid://c46c56elpxndb" path="res://universal/attack_engine/AttackSpawner.tscn" id="4_jf7ca"]
+[ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://npc_enemies/npc_enemy_data.gd" id="5_rf7v8"]
+[ext_resource type="Resource" uid="uid://dsqrnvq1wh4sp" path="res://npc_enemies/area_regen/area_regen.tres" id="7_0qps2"]
+[ext_resource type="PackedScene" uid="uid://cfm5hq075vb57" path="res://universal/DefaultCamera.tscn" id="8_v0phw"]
+[ext_resource type="Resource" uid="uid://xkoqv77slg41" path="res://npc_enemies/laser_attack/laser_attack.tres" id="9_i4uba"]
+[ext_resource type="Resource" uid="uid://b2n6in5412jan" path="res://npc_enemies/area_attack/area_attack.tres" id="9_xterq"]
+[ext_resource type="Resource" uid="uid://owqeffwbn1r0" path="res://npc_enemies/bullet_attack/bullet_attack.tres" id="10_0qps2"]
+[ext_resource type="Resource" uid="uid://bcra5eivrr0mp" path="res://npc_enemies/sentry/sentry.tres" id="11_bvt7c"]
+
+[node name="Node2D" type="Node2D" unique_id=1455060469]
+
+[node name="map_bg" type="Sprite2D" parent="." unique_id=521322136]
+texture = ExtResource("1_3n41n")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=184081526]
+z_index = 4
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1000.0
+offset_top = -500.0
+offset_right = 1000.0
+offset_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 0)
+
+[node name="Player" parent="." unique_id=73547909 instance=ExtResource("1_gbag3")]
+
+[node name="mask" type="Sprite2D" parent="." unique_id=2098126882]
+modulate = Color(0, 0, 0, 1)
+z_index = 5
+texture = ExtResource("2_e0ej0")
+
+[node name="game_ui" parent="." unique_id=746683599 instance=ExtResource("3_qii2m")]
+
+[node name="AttackSpawner" parent="." unique_id=1604386583 instance=ExtResource("4_jf7ca")]
+attacks = Array[ExtResource("5_rf7v8")]([ExtResource("7_0qps2"), ExtResource("9_xterq"), ExtResource("9_i4uba"), ExtResource("10_0qps2"), ExtResource("11_bvt7c")])
+
+[node name="DefaultCamera" parent="." unique_id=736599886 instance=ExtResource("8_v0phw")]

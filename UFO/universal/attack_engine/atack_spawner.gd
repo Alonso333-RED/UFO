@@ -1,6 +1,6 @@
 extends Node
 
-@export var attacks : Array[AttackData] = []
+@export var attacks : Array[EnemyData] = []
 
 var spawn_rate : float = 1.0
 var spawn_accumulator : float = 0.0
@@ -36,7 +36,7 @@ func spawn_attack():
 	var instance = data.scene.instantiate()
 	add_child(instance)
 	
-func pick_attack_data() -> AttackData:
+func pick_attack_data() -> EnemyData:
 	if total_weight <= 0.0:
 		return null
 	var r := randf() * total_weight

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://cvs5ygfm2rpla"]
+
+[ext_resource type="Script" uid="uid://o20qpwy26iej" path="res://maps/level_data.gd" id="1_g2rxf"]
+
+[resource]
+script = ExtResource("1_g2rxf")
+preview_path = "res://maps/horde_mode/orbital_arena/map.jpg"
+name = "Arena Orbital Terrana"
+description = "El protocolo de inicialización ha comenzado. Tu capacidad para neutralizar objetivos será puesta a prueba en condiciones de combate simulado."
+difficulty = 1
+scene = "res://maps/horde_mode/orbital_arena/terran_orbital_arena.tscn"

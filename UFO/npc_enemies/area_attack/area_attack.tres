@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AttackData" format=3 uid="uid://b2n6in5412jan"]
+
+[ext_resource type="PackedScene" uid="uid://cx7tsdgup31h6" path="res://npc_enemies/area_attack/AreaAttack.tscn" id="1_16003"]
+[ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://npc_enemies/npc_enemy_data.gd" id="1_p07bs"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_p07bs")
+scene = ExtResource("1_16003")
+rarity = 1.0
+metadata/_custom_type_script = "uid://dq45wq163ut3i"

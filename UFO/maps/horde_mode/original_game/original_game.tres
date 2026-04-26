@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://d378mesn7vhwn"]
+
+[ext_resource type="Script" uid="uid://o20qpwy26iej" path="res://maps/level_data.gd" id="1_rda36"]
+
+[resource]
+script = ExtResource("1_rda36")
+preview_path = "res://maps/horde_mode/original_game/original_level_preview.png"
+name = "Juego Original"
+difficulty = 1
+scene = "res://maps/horde_mode/original_game/original_game.tscn"
