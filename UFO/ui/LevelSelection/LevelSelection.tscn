@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://72mkoqluvjc7" path="res://ui/LevelSelection/level_list.tres" id="2_akgtj"]
 [ext_resource type="FontFile" uid="uid://d3bb1xocxaabe" path="res://fonts/Doto-VariableFont_ROND,wght.ttf" id="2_o3ose"]
 [ext_resource type="Texture2D" uid="uid://d2qds78q24uyy" path="res://ui/LevelSelection/next_option.png" id="5_iipng"]
-[ext_resource type="Texture2D" uid="uid://c416fmysc0eqb" path="res://ui/game_ui/go_home.png" id="6_nsmrt"]
+[ext_resource type="Texture2D" uid="uid://c416fmysc0eqb" path="res://ui/game_ui/sprites/go_home.png" id="6_nsmrt"]
 [ext_resource type="Script" uid="uid://b62fy5a742rlc" path="res://ui/LevelSelection/back.gd" id="7_akgtj"]
 
 [node name="LevelSelection" type="Control" unique_id=138925624]

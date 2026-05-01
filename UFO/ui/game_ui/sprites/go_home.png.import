@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drbn8s26qm6br"
-path="res://.godot/imported/up.png-369c57a049e20ebba49264c5cb4afade.ctex"
+uid="uid://c416fmysc0eqb"
+path="res://.godot/imported/go_home.png-99ebbee4beb82e37f4103430de3413b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/game_ui/touch_screen_controls/up.png"
-dest_files=["res://.godot/imported/up.png-369c57a049e20ebba49264c5cb4afade.ctex"]
+source_file="res://ui/game_ui/sprites/go_home.png"
+dest_files=["res://.godot/imported/go_home.png-99ebbee4beb82e37f4103430de3413b3.ctex"]
 
 [params]
 

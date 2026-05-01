@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c416fmysc0eqb"
-path="res://.godot/imported/go_home.png-0baed1d2e959c8c130472f37a5af8b74.ctex"
+uid="uid://cnblfh2137u5i"
+path="res://.godot/imported/move.png-b36976b342b44e675bbdeaef2b264ffc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/game_ui/go_home.png"
-dest_files=["res://.godot/imported/go_home.png-0baed1d2e959c8c130472f37a5af8b74.ctex"]
+source_file="res://ui/game_ui/sprites/move.png"
+dest_files=["res://.godot/imported/move.png-b36976b342b44e675bbdeaef2b264ffc.ctex"]
 
 [params]
 

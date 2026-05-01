@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdedylwmbcg40"
-path="res://.godot/imported/down.png-7c4b424c108e9fb6ca0cd4da3a62a9b1.ctex"
+uid="uid://dtjyehccecm4u"
+path="res://.godot/imported/shoot.png-aad940d8e4ae94bc925e7c9ec37e4bc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/game_ui/touch_screen_controls/down.png"
-dest_files=["res://.godot/imported/down.png-7c4b424c108e9fb6ca0cd4da3a62a9b1.ctex"]
+source_file="res://ui/game_ui/sprites/shoot.png"
+dest_files=["res://.godot/imported/shoot.png-aad940d8e4ae94bc925e7c9ec37e4bc3.ctex"]
 
 [params]
 

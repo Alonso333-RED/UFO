@@ -7,7 +7,7 @@ var max_x = 450
 var min_y = -450
 var max_y = 450
 
-@export var max_health: int = 100
+@export var max_health: int = 1000
 @export var bullet_scene: PackedScene
 
 var health: int
@@ -17,18 +17,16 @@ var shoot_cooldown = 0.1
 var shoot_time = 0.0
 
 # -------------------------
-# AIM / INPUT
+# INPUT ABSTRACTO
 # -------------------------
-var aim_position = Vector2.ZERO
-var aim_direction = Vector2.RIGHT
-var last_aim_dir = Vector2.RIGHT
-
-var shooting = false
-var using_joystick := false
+var move_input := Vector2.ZERO
+var aim_input := Vector2.RIGHT
+var last_aim_dir := Vector2.RIGHT
+var shooting := false
 
 
 # UI
-@onready var hp_indicator = $/root/Node2D/game_ui/CanvasLayer/controls_container/Label
+@onready var hp_indicator = $/root/Node2D/game_ui/CanvasLayer/exit_button/Label
 
 
 func _ready():
@@ -40,21 +38,17 @@ func _ready():
 # -------------------------
 @warning_ignore("unused_parameter")
 func _physics_process(delta):
-	var input_vector = Vector2.ZERO
+	var input_vector := Vector2.ZERO
 
+	# PC movement
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 
-	if Input.is_action_pressed("ui_up_right"):
-		input_vector = Vector2(1, -1)
-	elif Input.is_action_pressed("ui_up_left"):
-		input_vector = Vector2(-1, -1)
-	elif Input.is_action_pressed("ui_down_right"):
-		input_vector = Vector2(1, 1)
-	elif Input.is_action_pressed("ui_down_left"):
-		input_vector = Vector2(-1, 1)
+	# override móvil (joystick)
+	if move_input.length() > 0.1:
+		input_vector = move_input
 
-	if input_vector != Vector2.ZERO:
+	if input_vector.length() > 0.1:
 		velocity = input_vector.normalized() * speed
 	else:
 		velocity = Vector2.ZERO
@@ -72,12 +66,11 @@ func _process(delta):
 	update_aim()
 	update_shooting()
 
-	# ROTACIÓN
-	var dir = aim_position - global_position
-	if dir.length() > 0.01:
-		rotation = dir.angle()
+	# rotación hacia aim
+	if aim_input.length() > 0.01:
+		rotation = aim_input.angle()
 
-	# COOLDOWN
+	# cooldown
 	shoot_time -= delta
 
 	if shooting and shoot_time <= 0:
@@ -86,53 +79,59 @@ func _process(delta):
 
 
 # -------------------------
-# AIM SYSTEM
+# AIM SYSTEM (FIX DEFINITIVO)
 # -------------------------
 func update_aim():
-	if OS.has_feature("mobile"):
-		update_aim_mobile()
+	
+	var ui = get_node("/root/Node2D/game_ui")
+	if ui.aim_using_joystick:
+		return
+
+	var dir = get_global_mouse_position() - global_position
+
+	if dir.length() > 0.01:
+		aim_input = dir.normalized()
+		last_aim_dir = aim_input
 	else:
-		if not using_joystick:
-			update_aim_pc()
-
-
-func update_aim_pc():
-	aim_position = get_global_mouse_position()
-	aim_direction = (aim_position - global_position).normalized()
-
-
-func update_aim_mobile():
-	# joystick manda dirección
-	aim_position = global_position + aim_direction * 1000
-
+		aim_input = last_aim_dir
 
 func set_aim_input(dir: Vector2):
 	if dir.length() > 0.1:
 		last_aim_dir = dir.normalized()
 
-	aim_direction = last_aim_dir
-	aim_position = global_position + aim_direction * 1000
+	aim_input = last_aim_dir
 
 
 # -------------------------
 # SHOOT SYSTEM
 # -------------------------
 func update_shooting():
-	if not OS.has_feature("mobile") and not using_joystick:
+	# PC input
+	if not OS.has_feature("mobile"):
 		shooting = Input.is_action_pressed("shoot")
+		
+
+func set_shooting_input(b: bool):
+	shooting = b
 
 
-func set_shooting_input(is_shooting: bool):
-	shooting = is_shooting
+# -------------------------
+# MOVIMIENTO DESDE JOYSTICK
+# -------------------------
+func set_move_input(v: Vector2):
+	move_input = v
 
 
+# -------------------------
+# DISPARO
+# -------------------------
 func shoot():
 	var bullet = bullet_scene.instantiate()
 	get_parent().add_child(bullet)
 
 	bullet.global_position = global_position
 
-	var dir = aim_direction
+	var dir = aim_input
 
 	var spread = deg_to_rad(6)
 	var random_angle = randf_range(-spread, spread)
@@ -141,7 +140,7 @@ func shoot():
 
 
 # -------------------------
-# HEALTH
+# VIDA
 # -------------------------
 func take_damage(amount: int) -> void:
 	if is_dead:
