@@ -13,7 +13,7 @@ var max_y = 450
 var health: int
 var is_dead = false
 
-var shoot_cooldown = 0.2
+var shoot_cooldown = 0.1
 var shoot_time = 0.0
 
 @onready var hp_indicator = $/root/Node2D/game_ui/CanvasLayer/controls_container/Label

@@ -76,7 +76,7 @@ layout_mode = 2
 size_flags_vertical = 3
 columns = 2
 
-[node name="Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=691950534]
+[node name="Options" type="Button" parent="VBoxContainer/GridContainer" unique_id=691950534]
 custom_minimum_size = Vector2(250, 125)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -86,7 +86,7 @@ theme_override_font_sizes/font_size = 63
 text = "Opciones"
 flat = true
 
-[node name="Button4" type="Button" parent="VBoxContainer/GridContainer" unique_id=328309146]
+[node name="HowToPlay" type="Button" parent="VBoxContainer/GridContainer" unique_id=328309146]
 custom_minimum_size = Vector2(250, 125)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -96,7 +96,7 @@ theme_override_font_sizes/font_size = 63
 text = "Como jugar"
 flat = true
 
-[node name="Button3" type="Button" parent="VBoxContainer/GridContainer" unique_id=981620631]
+[node name="News" type="Button" parent="VBoxContainer/GridContainer" unique_id=981620631]
 custom_minimum_size = Vector2(250, 125)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -106,7 +106,7 @@ theme_override_font_sizes/font_size = 63
 text = "Novedades"
 flat = true
 
-[node name="Button2" type="Button" parent="VBoxContainer/GridContainer" unique_id=137800470]
+[node name="Credits" type="Button" parent="VBoxContainer/GridContainer" unique_id=137800470]
 custom_minimum_size = Vector2(250, 125)
 layout_mode = 2
 size_flags_horizontal = 3

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c044sc36rgw7x"]
 
-[ext_resource type="Script" uid="uid://semr85ipewof" path="res://universal/player/bullet.gd" id="1_v8oga"]
+[ext_resource type="Script" uid="uid://semr85ipewof" path="res://npc_enemies/sentry/bullet.gd" id="1_v8oga"]
 [ext_resource type="Texture2D" uid="uid://dg2tv5llm6f1d" path="res://universal/player/BasicBullet.png" id="2_s5q82"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eigar"]

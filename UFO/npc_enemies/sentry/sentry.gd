@@ -4,6 +4,10 @@ extends Node2D
 @onready var muzzle = $turret/muzzle
 @onready var bullet_scene = preload("res://npc_enemies/sentry/Bullet.tscn")
 
+var max_hitpoints = 25
+var is_dead = false
+var hitpoints = max_hitpoints
+
 func _ready():
 	set_random_position()
 
@@ -48,7 +52,7 @@ func _process(delta):
 
 		if shoot_timer <= 0:
 			shoot()
-			shoot_timer = 0.25
+			shoot_timer = 0.1
 			
 func shoot():
 	var bullet = bullet_scene.instantiate()
@@ -62,3 +66,9 @@ func shoot():
 	var random_angle = randf_range(-spread, spread)
 
 	bullet.direction = dir.rotated(random_angle)
+	
+func take_damage(amount):
+	hitpoints -= amount
+
+	if hitpoints <= 0:
+		queue_free()

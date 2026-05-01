@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://c4urto2uio84e" path="res://npc_enemies/sentry/turret.png" id="2_yo75i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0hx8f"]
-radius = 50.0
+radius = 26.019224
 
-[node name="Sentry" type="Node2D" unique_id=1829395924]
+[node name="Sentry" type="Node2D" unique_id=1829395924 groups=["enemy_npc"]]
 script = ExtResource("1_g2j0e")
 
 [node name="base" type="Sprite2D" parent="." unique_id=1682580657]
