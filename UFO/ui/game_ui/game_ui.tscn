@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://57cwc4j2hbfv" path="res://ui/game_ui/touch_screen_controls/up_left.png" id="1_gxelx"]
 [ext_resource type="Texture2D" uid="uid://c416fmysc0eqb" path="res://ui/game_ui/go_home.png" id="1_pfn65"]
+[ext_resource type="Script" uid="uid://7tpiokwgdjc2" path="res://ui/game_ui/game_ui.gd" id="1_wej1e"]
 [ext_resource type="Script" uid="uid://b2nof7st80vml" path="res://ui/game_ui/button_scripts/up_left.gd" id="2_4ul05"]
 [ext_resource type="Script" uid="uid://cd4qtdvmr3pve" path="res://ui/game_ui/button_scripts/exit.gd" id="2_bruof"]
 [ext_resource type="Texture2D" uid="uid://drbn8s26qm6br" path="res://ui/game_ui/touch_screen_controls/up.png" id="3_mninb"]
@@ -25,6 +26,7 @@
 [node name="game_ui" type="Control" unique_id=746683599]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_wej1e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=848399417]
 follow_viewport_enabled = true
