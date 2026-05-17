@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://c46c56elpxndb" path="res://universal/attack_engine/AttackSpawner.tscn" id="4_o7fow"]
 [ext_resource type="PackedScene" uid="uid://cfm5hq075vb57" path="res://universal/DefaultCamera.tscn" id="5_2i4nr"]
 [ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://npc_enemies/npc_enemy_data.gd" id="5_l6tin"]
-[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://npc_enemies/area_regen/AreaRegen.tscn" id="6_l6tin"]
-[ext_resource type="PackedScene" uid="uid://cx7tsdgup31h6" path="res://npc_enemies/area_attack/AreaAttack.tscn" id="7_5op37"]
+[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://npc_enemies/repair_kit/RepairKit.tscn" id="6_l6tin"]
+[ext_resource type="PackedScene" uid="uid://cx7tsdgup31h6" path="res://npc_enemies/fire_zone/FireZone.tscn" id="7_5op37"]
 [ext_resource type="PackedScene" uid="uid://dk3y6wlflkbhj" path="res://npc_enemies/laser_attack/LaserAttack.tscn" id="8_r7h3b"]
-[ext_resource type="PackedScene" uid="uid://cn7gha1yc3216" path="res://npc_enemies/bullet_attack/BulletAttack.tscn" id="9_fqjqk"]
+[ext_resource type="PackedScene" uid="uid://cn7gha1yc3216" path="res://npc_enemies/sniper_attack/SniperAttack.tscn" id="9_fqjqk"]
 [ext_resource type="PackedScene" uid="uid://c1nrw4xheladr" path="res://ui/game_ui/game_ui.tscn" id="9_ykf5d"]
 
 [sub_resource type="Resource" id="Resource_as6kj"]

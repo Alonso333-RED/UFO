@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b456c6u4wuaid"]
+
+[ext_resource type="Script" uid="uid://boqechb2c7xgm" path="res://npc_enemies/repair_kit/repair_kit.gd" id="1_7vwnv"]
+[ext_resource type="Texture2D" uid="uid://d3mtgg4fu60d5" path="res://npc_enemies/repair_kit/repair_kit.png" id="2_alk8k"]
+[ext_resource type="AudioStream" uid="uid://yrk42ynqq1mp" path="res://sounds/repair.mp3" id="3_alk8k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64xv5"]
+size = Vector2(100, 50)
+
+[node name="RepairKit" type="Area2D" unique_id=1634869706]
+script = ExtResource("1_7vwnv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139157630]
+shape = SubResource("RectangleShape2D_64xv5")
+debug_color = Color(0, 1, 0, 0.50200003)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1888653221]
+z_index = 2
+texture = ExtResource("2_alk8k")
+
+[node name="spawn_sound" type="AudioStreamPlayer" parent="." unique_id=1826557113]
+stream = ExtResource("3_alk8k")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dsqrnvq1wh4sp"]
+
+[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://npc_enemies/repair_kit/RepairKit.tscn" id="1_sspl3"]
+[ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://npc_enemies/npc_enemy_data.gd" id="2_n88aa"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("2_n88aa")
+scene = ExtResource("1_sspl3")
+rarity = 2.0
+metadata/_custom_type_script = "uid://dq45wq163ut3i"

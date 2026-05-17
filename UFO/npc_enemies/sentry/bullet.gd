@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var speed := 1000.0
-@export var damage := 1
+@export var damage := 40
 var direction := Vector2.RIGHT
 
 func _process(delta):

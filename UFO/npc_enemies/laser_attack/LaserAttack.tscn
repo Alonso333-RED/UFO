@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dk3y6wlflkbhj"]
 
 [ext_resource type="Script" uid="uid://vtq22g5wdnu0" path="res://npc_enemies/laser_attack/laser_attack.gd" id="1_tu22p"]
-[ext_resource type="Texture2D" uid="uid://cqslfvgmpxu0n" path="res://npc_enemies/laser_attack/LaserAttackWarning.png" id="2_r5l6l"]
-[ext_resource type="Texture2D" uid="uid://ksvtw0myl381" path="res://npc_enemies/laser_attack/LaserAttackExecute.png" id="3_nswk3"]
-[ext_resource type="AudioStream" uid="uid://chutwynjpugf7" path="res://sounds/laser_attack.wav" id="4_n5q1y"]
+[ext_resource type="Texture2D" uid="uid://b6jyq652o8h85" path="res://npc_enemies/laser_attack/laser_attack_aim.png" id="2_tgwh4"]
+[ext_resource type="Texture2D" uid="uid://br6v2xtc46xwy" path="res://npc_enemies/laser_attack/laser_attack_beam.png" id="3_jqiuo"]
+[ext_resource type="AudioStream" uid="uid://c1fjat5a3d63b" path="res://sounds/shots/laser-shot.mp3" id="4_tgwh4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w53eg"]
-size = Vector2(25, 2500)
+size = Vector2(5, 3000)
 
 [node name="LaserAttack" type="Area2D" unique_id=364579141]
 script = ExtResource("1_tu22p")
@@ -15,13 +15,13 @@ script = ExtResource("1_tu22p")
 shape = SubResource("RectangleShape2D_w53eg")
 
 [node name="warn_sprite" type="Sprite2D" parent="." unique_id=2020638120]
-scale = Vector2(0.025, 2.5)
-texture = ExtResource("2_r5l6l")
+scale = Vector2(1, 3000)
+texture = ExtResource("2_tgwh4")
 
 [node name="attack_sprite" type="Sprite2D" parent="." unique_id=1754960477]
 z_index = 2
-scale = Vector2(0.025, 2.5)
-texture = ExtResource("3_nswk3")
+scale = Vector2(1, 3000)
+texture = ExtResource("3_jqiuo")
 
 [node name="attack_sound" type="AudioStreamPlayer" parent="." unique_id=1969029126]
-stream = ExtResource("4_n5q1y")
+stream = ExtResource("4_tgwh4")

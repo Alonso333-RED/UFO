@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://b22pgcmt63ycn" path="res://universal/attack_engine/atack_spawner.gd" id="1_e6iri"]
 [ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://npc_enemies/npc_enemy_data.gd" id="2_fn8d6"]
-[ext_resource type="Resource" uid="uid://dsqrnvq1wh4sp" path="res://npc_enemies/area_regen/area_regen.tres" id="3_y1xe5"]
-[ext_resource type="Resource" uid="uid://b2n6in5412jan" path="res://npc_enemies/area_attack/area_attack.tres" id="4_011ar"]
+[ext_resource type="Resource" uid="uid://dsqrnvq1wh4sp" path="res://npc_enemies/repair_kit/repair_kit.tres" id="3_y1xe5"]
+[ext_resource type="Resource" uid="uid://b2n6in5412jan" path="res://npc_enemies/fire_zone/fire_zone.tres" id="4_011ar"]
 [ext_resource type="Resource" uid="uid://xkoqv77slg41" path="res://npc_enemies/laser_attack/laser_attack.tres" id="5_migaw"]
-[ext_resource type="Resource" uid="uid://owqeffwbn1r0" path="res://npc_enemies/bullet_attack/bullet_attack.tres" id="6_ih2xp"]
+[ext_resource type="Resource" uid="uid://owqeffwbn1r0" path="res://npc_enemies/sniper_attack/sniper_attack.tres" id="6_ih2xp"]
 
 [node name="AttackSpawner" type="Node" unique_id=1604386583]
 script = ExtResource("1_e6iri")

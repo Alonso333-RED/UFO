@@ -17,7 +17,6 @@ func _ready():
 		var y := randi() % HEIGHT
 		var radius := randi() % (MAX_RADIUS - MIN_RADIUS + 1) + MIN_RADIUS
 
-		# color sutil en el rango 229–255 por canal
 		var r := (randi() % 65 + 191) / 255.0
 		var g := (randi() % 65 + 191) / 255.0
 		var b := (randi() % 65 + 191) / 255.0
@@ -33,5 +32,4 @@ func _ready():
 
 	var tex := ImageTexture.create_from_image(img)
 
-	# asignar textura al TextureRect
 	self.texture = tex

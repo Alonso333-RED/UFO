@@ -2,7 +2,7 @@ extends Area2D
 
 var warn_time : int
 var attack_time : int
-@export var damage_per_attack := 1
+@export var damage_per_attack := 40
 @export var seconds_per_attack := 0.1
 var attacking := false
 var players_in_area := []

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c46c56elpxndb" path="res://universal/attack_engine/AttackSpawner.tscn" id="4_crr6a"]
 [ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://npc_enemies/npc_enemy_data.gd" id="5_23fv0"]
 [ext_resource type="PackedScene" uid="uid://dk3y6wlflkbhj" path="res://npc_enemies/laser_attack/LaserAttack.tscn" id="6_7t2gc"]
-[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://npc_enemies/area_regen/AreaRegen.tscn" id="7_vcfnq"]
+[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://npc_enemies/repair_kit/RepairKit.tscn" id="7_vcfnq"]
 [ext_resource type="PackedScene" uid="uid://cfm5hq075vb57" path="res://universal/DefaultCamera.tscn" id="8_0w16t"]
 
 [sub_resource type="Resource" id="Resource_d6njs"]

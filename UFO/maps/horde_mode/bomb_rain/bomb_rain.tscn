@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://c1nrw4xheladr" path="res://ui/game_ui/game_ui.tscn" id="3_et1rj"]
 [ext_resource type="PackedScene" uid="uid://c46c56elpxndb" path="res://universal/attack_engine/AttackSpawner.tscn" id="4_igo22"]
 [ext_resource type="Script" uid="uid://dq45wq163ut3i" path="res://npc_enemies/npc_enemy_data.gd" id="5_tqpmp"]
-[ext_resource type="PackedScene" uid="uid://cx7tsdgup31h6" path="res://npc_enemies/area_attack/AreaAttack.tscn" id="6_4bqxv"]
-[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://npc_enemies/area_regen/AreaRegen.tscn" id="7_uyc8n"]
+[ext_resource type="PackedScene" uid="uid://cx7tsdgup31h6" path="res://npc_enemies/fire_zone/FireZone.tscn" id="6_4bqxv"]
+[ext_resource type="PackedScene" uid="uid://b456c6u4wuaid" path="res://npc_enemies/repair_kit/RepairKit.tscn" id="7_uyc8n"]
 [ext_resource type="PackedScene" uid="uid://cfm5hq075vb57" path="res://universal/DefaultCamera.tscn" id="8_cs085"]
 
 [sub_resource type="Resource" id="Resource_dnpj8"]

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cn7gha1yc3216"]
+
+[ext_resource type="Script" uid="uid://dshwjkyf2dgmq" path="res://npc_enemies/sniper_attack/sniper_attack.gd" id="1_lkxjd"]
+[ext_resource type="Texture2D" uid="uid://bq7cq2pis8kbd" path="res://npc_enemies/sniper_attack/sniper_bullet.png" id="2_lkxjd"]
+[ext_resource type="Texture2D" uid="uid://dv75x4w2iwi6i" path="res://npc_enemies/sniper_attack/sniper_aim.png" id="3_q6fst"]
+[ext_resource type="AudioStream" uid="uid://b4by3wnkpvf6t" path="res://sounds/shots/sniper-shot.mp3" id="4_q6fst"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hycrm"]
+height = 100.0
+
+[node name="SniperAttack" type="Area2D" unique_id=1055124260]
+script = ExtResource("1_lkxjd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1440936937]
+shape = SubResource("CapsuleShape2D_hycrm")
+
+[node name="bullet_sprite" type="Sprite2D" parent="." unique_id=892373438]
+z_index = 3
+rotation = 3.1415927
+texture = ExtResource("2_lkxjd")
+
+[node name="aim_laser" type="Sprite2D" parent="." unique_id=152931882]
+scale = Vector2(1, 6000)
+texture = ExtResource("3_q6fst")
+
+[node name="attack_sound" type="AudioStreamPlayer" parent="." unique_id=701376473]
+stream = ExtResource("4_q6fst")

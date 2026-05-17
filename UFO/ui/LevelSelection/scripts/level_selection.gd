@@ -12,10 +12,8 @@ extends Control
 var current_index := 0
 
 func _ready():
-	# Mostramos la UI por primera vez
 	update_ui()
 	
-	# Conectar señales de botones
 	back_btn.pressed.connect(_on_Back_pressed)
 	next_btn.pressed.connect(_on_Next_pressed)
 	level_preview.pressed.connect(_on_Play_pressed)
@@ -23,28 +21,24 @@ func _ready():
 func update_ui():
 	var lvl = level_list.levels[current_index]
 	if lvl.preview_path != "":
-		# Carga la textura desde la ruta en tiempo de ejecución
 		var tex : Texture2D = load(lvl.preview_path)
 		level_preview.icon = tex
 	else:
 		level_preview.icon = null
 
-	level_preview.text = ""  # sin texto sobre la imagen
+	level_preview.text = ""
 	name_label.text = lvl.name
 	diff_label.text = ["*","**","***","****","*****"][lvl.difficulty]
 	desc_label.text = lvl.description
 
 func _on_Back_pressed():
-	# Si estás en 0 vas al último, si no, restas 1
 	current_index = (current_index - 1 + level_list.levels.size()) % level_list.levels.size()
 	update_ui()
 
 func _on_Next_pressed():
-	# Si estás en el último vas a 0, si no, sumás 1
 	current_index = (current_index + 1) % level_list.levels.size()
 	update_ui()
 
 func _on_Play_pressed():
 	var lvl = level_list.levels[current_index]
-	# Cambia la escena usando el camino guardado en `scene`
 	get_tree().change_scene_to_file(lvl.scene)

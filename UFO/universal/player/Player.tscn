@@ -3,12 +3,10 @@
 [ext_resource type="Script" uid="uid://71i6hryfwstd" path="res://universal/player/player.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://dpylrmlwjm0tr" path="res://universal/player/Bullet.tscn" id="2_2ahqq"]
 [ext_resource type="Texture2D" uid="uid://2humd0tnmmuv" path="res://universal/player/UFO-0.png" id="2_sweqy"]
-[ext_resource type="AudioStream" uid="uid://ddggg72ek0tt1" path="res://sounds/hit.wav" id="3_i3pqv"]
-[ext_resource type="AudioStream" uid="uid://dx0yw7gopxysg" path="res://sounds/regen.wav" id="4_hqtel"]
-[ext_resource type="AudioStream" uid="uid://cmhiu13jgeohd" path="res://sounds/recover.wav" id="5_sweqy"]
+[ext_resource type="AudioStream" uid="uid://b3lwcnfgy17lp" path="res://sounds/shots/smg-shot.mp3" id="5_wj1w0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3pqv"]
-radius = 32.0
+radius = 50.0
 
 [node name="Player" type="CharacterBody2D" unique_id=73547909 groups=["player"]]
 script = ExtResource("1_onrkg")
@@ -30,13 +28,7 @@ debug_color = Color(1, 1, 1, 0.5)
 [node name="RegenTimer" type="Timer" parent="." unique_id=139421536]
 autostart = true
 
-[node name="hit" type="AudioStreamPlayer" parent="." unique_id=1108756166]
-stream = ExtResource("3_i3pqv")
-
-[node name="regen" type="AudioStreamPlayer" parent="." unique_id=766093578]
-stream = ExtResource("4_hqtel")
-
-[node name="recover_sound" type="AudioStreamPlayer" parent="." unique_id=533022379]
-stream = ExtResource("5_sweqy")
+[node name="shot" type="AudioStreamPlayer" parent="." unique_id=1342142474]
+stream = ExtResource("5_wj1w0")
 
 [connection signal="timeout" from="RegenTimer" to="." method="_on_timer_timeout"]

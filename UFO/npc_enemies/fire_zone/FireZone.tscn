@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cx7tsdgup31h6"]
+
+[ext_resource type="Script" uid="uid://dtexy7nct4pmq" path="res://npc_enemies/fire_zone/fire_zone.gd" id="1_seu2e"]
+[ext_resource type="Texture2D" uid="uid://cub00utrfton0" path="res://npc_enemies/fire_zone/fire_zone_aim.png" id="2_jc1eu"]
+[ext_resource type="Texture2D" uid="uid://qglh1s36vqji" path="res://npc_enemies/fire_zone/fire_zone.png" id="3_odrth"]
+[ext_resource type="AudioStream" uid="uid://lys8x8db15t6" path="res://sounds/fire-whoosh.mp3" id="4_seu2e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rjuya"]
+radius = 50.0
+
+[node name="FireZone" type="Area2D" unique_id=1634869706]
+script = ExtResource("1_seu2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139157630]
+shape = SubResource("CircleShape2D_rjuya")
+debug_color = Color(1, 0, 0, 0.5)
+
+[node name="warn_sprite" type="Sprite2D" parent="." unique_id=680875085]
+texture = ExtResource("2_jc1eu")
+
+[node name="attack_sprite" type="Sprite2D" parent="." unique_id=1888653221]
+z_index = 2
+texture = ExtResource("3_odrth")
+
+[node name="attack_sound" type="AudioStreamPlayer" parent="." unique_id=1826557113]
+stream = ExtResource("4_seu2e")

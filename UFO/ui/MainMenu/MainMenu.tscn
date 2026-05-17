@@ -4,7 +4,6 @@
 [ext_resource type="FontFile" uid="uid://d3bb1xocxaabe" path="res://fonts/Doto-VariableFont_ROND,wght.ttf" id="1_otibh"]
 [ext_resource type="Script" uid="uid://35d6xt4hoo2q" path="res://ui/MainMenu/buttons_scripts/close.gd" id="3_b76km"]
 [ext_resource type="Script" uid="uid://p5f1y4k0aaf1" path="res://ui/MainMenu/buttons_scripts/play.gd" id="3_wlwnj"]
-[ext_resource type="AudioStream" uid="uid://c72tpojda5pgm" path="res://sounds/generic_button.mp3" id="5_jxptb"]
 
 [node name="MainMenu" type="Control" unique_id=138925624]
 layout_mode = 3
@@ -141,6 +140,3 @@ theme_override_font_sizes/font_size = 30
 text = "Hecho por Alonso
 v000.000.000"
 vertical_alignment = 1
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=444879545]
-stream = ExtResource("5_jxptb")

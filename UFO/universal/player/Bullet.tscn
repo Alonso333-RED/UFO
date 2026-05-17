@@ -4,13 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://dg2tv5llm6f1d" path="res://universal/player/BasicBullet.png" id="2_ycsgu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eigar"]
-radius = 3.1622777
+radius = 5.0
 
 [node name="Bullet" type="Area2D" unique_id=956818541]
 script = ExtResource("1_r32ql")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1821173056]
-scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_ycsgu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1107254277]
